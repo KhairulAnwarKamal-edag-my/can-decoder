@@ -22,22 +22,7 @@ Here's a brief description of each field in the output dictionary:
         + `rtr`: Whether the frame is a remote transmission request.
         + `ide`: Whether the frame is an extended frame.
 
-To use this script, simply copy and paste the CAN frame data into the script as input,
-and it will output the decoded frame in the format described above. For example:
-```
-# Example usage
 
-# Connect to the UART port
-uart = serial.Serial('/dev/ttyUSB0', 115200)
-
-# Read a CAN frame from the UART port
-frame_data = uart.read(8)
-
-# Decode the CAN frame using the script
-decoded_frame = decode_can_frame(frame_data)
-
-print(decoded_frame)
-```
 This code will connect to a UART port at `/dev/ttyUSB0` (replace with the appropriate
 path for your system), read an 8-byte CAN frame from the port, and then decode it
 using the `decode_can_frame()` function. The decoded frame will be printed to the
